@@ -59,7 +59,7 @@ public class ServletCadastroLivrso extends HttpServlet {
 			dao.adicionar(livro);
 			
 			request.setAttribute("msg", "Livro " + livro.getCodigo() + " incluido!");
-			request.getRequestDispatcher("admin/cadLivros.jsp");
+			request.getRequestDispatcher("cadLivros.jsp");
 			
 		} catch (Exception e) {
 			e.printStackTrace();
