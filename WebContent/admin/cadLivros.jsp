@@ -8,17 +8,17 @@
 	<h1>Cadastro de Livros</h1>
 	<form action="cadLivros" method="post" enctype="multipart/form-data">
 		Código:<br/>
-		<input type="text" name="codigo" size="10">
+		<input type="text" name="codigo" size="10"><br/>
 		Titulo:<br/>
-		<input type="text" name="titulo" size="30">
+		<input type="text" name="titulo" size="30"><br/>
 		Autor:<br/>
-		<input type="text" name="autor" size="30">
+		<input type="text" name="autor" size="30"><br/>
 		Data de Puplicação:<br/>
-		<input type="text" name="dataPublicacao" size="20">
+		<input type="text" name="datapub" size="20"><br/>
 		Preço:<br/>
-		<input type="text" name="preco" size="10">
+		<input type="text" name="preco" size="10"><br/>
 		Foto:<br/>
-		<input type="file" name="foto">
+		<input type="file" name="foto"><br/>
 		
 		<input type="submit" value="Incluir">
 		${msg}

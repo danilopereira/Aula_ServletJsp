@@ -17,7 +17,7 @@ import javax.servlet.http.Part;
 import br.com.fiap.dao.GenericDao;
 import br.com.fiap.entity.Livro;
 
-@WebServlet(name = "/admin/cadLivros")
+@WebServlet("/admin/cadLivros")
 @MultipartConfig
 public class ServletCadastroLivrso extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -56,10 +56,11 @@ public class ServletCadastroLivrso extends HttpServlet {
 			livro.setPreco(preco);
 			livro.setImagem(imagem);
 			GenericDao<Livro> dao = new GenericDao<Livro>(Livro.class);
+			dao.adicionar(livro);
 			
 			request.setAttribute("msg", "Livro " + livro.getCodigo() + " incluido!");
-			request.getRequestDispatcher("cadLivros.jsp");
-			dao.adicionar(livro);
+			request.getRequestDispatcher("admin/cadLivros.jsp");
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
